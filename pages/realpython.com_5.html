@@ -1,0 +1,5188 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+    <link href="https://files.realpython.com" rel="preconnect">
+
+    <title>Reference – Real Python</title>
+    <meta name="author" content="Real Python">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+
+    
+      <link rel="stylesheet" href="/static/realpython.min.5cb5ada81a8d.css">
+      
+      <link rel="stylesheet" href="/static/gfonts/font.5ac42994de49.css">
+      <link rel="preload" href="/static/glightbox.min.9b438b29cef1.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/static/glightbox.min.9b438b29cef1.css"></noscript>
+      
+    
+
+    
+
+    
+    
+      <link rel="canonical" href="https://realpython.com/ref/">
+
+      
+      
+        
+
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://realpython.com/static/social-default-image.5e1aa4786b3a.png">
+<meta property="og:image" content="https://realpython.com/static/social-default-image.5e1aa4786b3a.png">
+
+      
+      <meta name="twitter:creator" content="@realpython">
+      <meta name="twitter:site" content="@realpython">
+      <meta property="og:title" content="Reference – Real Python">
+      <meta property="og:type" content="article">
+      <meta property="og:url" content="https://realpython.com/ref/">
+      <meta property="og:description" content="">
+    
+
+    <link href="/static/favicon.68cbf4197b0c.png" rel="icon">
+    <link href="https://realpython.com/atom.xml" rel="alternate" title="Real Python" type="application/atom+xml">
+    <link rel="manifest" href="/manifest.json">
+
+    
+
+    
+    
+
+    
+    <script id="icons-data" type="application/json">{"iconsUrl": "/static/icons.1fb5b1968c3f.svg"}</script>
+    <script id="optins-data" type="application/json">{"turnstileSiteKey": "0x4AAAAAAAQQUCLRXBi8NnUh"}</script>
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7L6L5F6Y6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L7L6L5F6Y6',{'content_group': 'reference'});
+
+  gtag('get', 'G-L7L6L5F6Y6', 'client_id', (clid) => {
+    document.cookie = 'gaclid=' + clid + ';max-age=86400000;path=/;secure';
+  });
+  
+</script>
+
+  </head>
+  <body data-authenticated="false">
+    
+      
+
+
+
+  
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark flex-column  user-select-none">
+  <div class="container flex-row">
+
+    <a class="navbar-brand" href="/">
+      <img src="/static/real-python-logo.893c30edea53.svg" width="165" height="40" class="d-inline-block align-top" alt="Real Python">
+    </a>
+
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navbar-nav-scroll" id="navbarSupportedContent" role="navigation" aria-label="Main Navigation">
+
+      <ul class="navbar-nav mr-2">
+
+        <li class="nav-item">
+          <a class="nav-link rounded" href="/start-here/">Start&nbsp;Here</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link rounded dropdown-toggle" href="#" id="navbarDropdownLibrary" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="icon baseline" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#brands--python"/></svg></span> Learn Python
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownLibrary">
+            
+
+            
+<a class="dropdown-item " href="/search?kind=article&kind=course&order=newest" style="color: #ff7e73; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#solid--graduation-cap"/></svg></span>Python Tutorials&nbsp;→<br><small class="text-secondary">In-depth articles and video courses</small></a>
+
+
+            
+<a class="dropdown-item " href="/learning-paths/" style="color: #ffc873; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@learning-path"/></svg></span>Learning Paths&nbsp;→<br><small class="text-secondary">Guided study plans for accelerated learning</small></a>
+
+
+            
+<a class="dropdown-item " href="/quizzes/" style="color: #abe0e5; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@quiz"/></svg></span>Quizzes & Exercises&nbsp;→<br><small class="text-secondary">Check your learning progress</small></a>
+
+
+            
+<a class="dropdown-item " href="/tutorials/all/" style="color: #ccc; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@category"/></svg></span>Browse Topics&nbsp;→<br><small class="text-secondary">Focus on a specific area or skill level</small></a>
+
+
+            
+<a class="dropdown-item " href="/community/" style="color: #e5c6ab; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#solid--message-smile"/></svg></span>Community Chat&nbsp;→<br><small class="text-secondary">Learn with other Pythonistas</small></a>
+
+
+            
+<a class="dropdown-item " href="/office-hours/" style="color: #e5c6ab; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#solid--users"/></svg></span>Office Hours&nbsp;→<br><small class="text-secondary">Live Q&A calls with Python experts</small></a>
+
+
+            
+<a class="dropdown-item " href="/podcasts/rpp/" style="color: #b8abe5; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@podcast"/></svg></span>Podcast&nbsp;→<br><small class="text-secondary">Hear what’s new in the world of Python</small></a>
+
+
+            
+<a class="dropdown-item " href="/products/books/" style="color: #abe5b1; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#solid--book-heart"/></svg></span>Books&nbsp;→<br><small class="text-secondary">Round out your knowledge and learn offline</small></a>
+
+
+            
+<a class="dropdown-item " href="/ref/" style="color: #abe0e5; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Reference&nbsp;→<br><small class="text-secondary">Concise definitions for common Python terms</small></a>
+
+
+            
+<a class="dropdown-item " href="/mentor/" style="color: #ffc873; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@code-mentor"/></svg></span>Code Mentor&nbsp;→<span class="float-right badge badge-pill badge-indigo">Beta</span><br><small class="text-secondary">Personalized code assistance &amp; learning tools</small></a>
+
+
+            
+              
+              
+<a class="dropdown-item border-top" href="/account/join/" style="color: #ffc107; line-height: 110%;"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#solid--star"/></svg></span>Unlock All Content&nbsp;→</a>
+
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link rounded dropdown-toggle" href="#" id="navbarDropdownMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            More
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+            <a class="dropdown-item" href="/learner-stories/">Learner Stories</a>
+            <a class="dropdown-item" href="/newsletter/">Python Newsletter</a>
+            <a class="dropdown-item" href="https://www.pythonjobshq.com" target="_blank">Python Job Board</a>
+            <a class="dropdown-item" href="/team/">Meet the Team</a>
+            <a class="dropdown-item" href="/jobs/">Become a Contributor</a>
+          </div>
+        </li>
+
+      </ul> 
+
+      
+      <div class="d-block d-lg-none"> 
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link rounded" href="/search" title="Search"><span class="icon baseline" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#v4--search"/></svg></span> Search</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="d-none d-lg-flex align-items-center mr-2 flex-fill">
+        <form class="form-inline w-100 position-relative" action="/search" method="GET">
+          <a class="js-search-form-submit position-absolute" href="/search" title="Search" aria-hidden="true" tabindex="-1"><span class="icon baseline text-muted pl-2" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#v4--search"/></svg></span></a>
+          <input class="search-autocomplete search-field form-control form-control-md mr-sm-1 mr-lg-2 w-100" style="padding-left: 2rem;" maxlength=50 type="search" placeholder="Search" aria-label="Search" aria-keyshortcuts="/ Control+J Meta+J" name="q" autocomplete="off">
+          <span class="search-hotkey-indicator position-absolute px-2 border border-input text-input rounded small user-select-none" style="right: 1em;" title="Press / (forward slash) or Ctrl+J to open search" aria-hidden="true">/</span>
+          <input type="hidden" name="_from" value="nav">
+        </form>
+      </div>
+      
+
+      <ul class="navbar-nav ml-auto">
+        
+          <li class="nav-item form-inline mr-2 my-2 ml-3 ml-lg-0">
+            <a class="btn btn-primary px-5 px-lg-3" href="/account/join/">Join</a>
+          </li>
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link rounded mx-0 px-lg-2" href="/account/login/?next=%2Fref%2F">Sign&#8209;In</a>
+          </li>
+        
+      </ul>
+
+    
+    </div>
+
+  </div>
+
+  
+
+</nav>
+
+    
+
+     
+
+    <div class="container main-content">
+      
+
+      
+<div class="row justify-content-center text-wrap-pretty">
+
+  <aside class="col-md-7 col-lg-4 order-lg-0 order-1 d-none d-lg-block mb-4 ref-sidebar sidebar-sticky">
+    
+      
+
+      
+      
+
+
+<reference-sidebar>
+  
+  
+
+
+<div class="d-flex sticky-top sticky-top-fade pb-3 ref-sidebar-pt">
+  <form class="form-inline col p-0" action="/search" method="GET" id="reference-search-form">
+    <a class="js-search-form-submit position-absolute" href="/search" title="Search" aria-hidden="true" tabindex="-1"><span class="icon baseline text-muted pl-2" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@search"/></svg></span></a>
+    <input class="form-control  w-100 " style="padding-left: 2rem;" maxlength=50 type="search" placeholder="Filter…" aria-label="Search" name="q" autocomplete="off">
+    <input type="hidden" name="_from" value="reference">
+    
+    <input type="hidden" name="kind" value="reference">
+  </form>
+  
+</div>
+
+
+  <div data-target-clear-filter-wrapper class="mt-n2 text-right text-muted d-none">
+    <span data-target-results-count></span> (<a data-action-clear-filter href="#" role="button">clear filter</a>)
+  </div>
+
+  <button data-action-clear-filter class="btn btn-sm btn-secondary w-100 mt-n4 d-none">Clear filter</button>
+
+  
+    <h3 class="h5 font-weight-bold small mt-2"><a href="/ref/glossary/" data-previewable>Python Glossary</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/absolute-import/" class="stretched-link" data-previewable>absolute import</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/abstract-base-class/" class="stretched-link" data-previewable>abstract base class (ABC)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/abstract-method/" class="stretched-link" data-previewable>abstract method</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/annotation/" class="stretched-link" data-previewable>annotation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/api/" class="stretched-link" data-previewable>application programming interface (API)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/args/" class="stretched-link" data-previewable><code>args</code> (arguments)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/argument/" class="stretched-link" data-previewable>argument</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/array/" class="stretched-link" data-previewable>array</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/ascii/" class="stretched-link" data-previewable>ASCII</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/assertion/" class="stretched-link" data-previewable>assertion</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/assignment/" class="stretched-link" data-previewable>assignment</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/assignment-expression/" class="stretched-link" data-previewable>assignment expression</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/asynchronous-context-manager/" class="stretched-link" data-previewable>asynchronous context manager</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/asynchronous-generator/" class="stretched-link" data-previewable>asynchronous generator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/asynchronous-generator-iterator/" class="stretched-link" data-previewable>asynchronous generator iterator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/asynchronous-iterable/" class="stretched-link" data-previewable>asynchronous iterable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/asynchronous-iteration/" class="stretched-link" data-previewable>asynchronous iteration</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/asynchronous-iterator/" class="stretched-link" data-previewable>asynchronous iterator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/asynchronous-programming/" class="stretched-link" data-previewable>asynchronous programming</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/attribute/" class="stretched-link" data-previewable>attribute</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/awaitable/" class="stretched-link" data-previewable>awaitable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/base-class/" class="stretched-link" data-previewable>base class</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/bdfl/" class="stretched-link" data-previewable>BDFL</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/binary-file/" class="stretched-link" data-previewable>binary file</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/boolean/" class="stretched-link" data-previewable>Boolean</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/boolean-flag/" class="stretched-link" data-previewable>Boolean flag</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/buffer-protocol/" class="stretched-link" data-previewable>buffer protocol</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/bytecode/" class="stretched-link" data-previewable>bytecode</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/bytes-like-object/" class="stretched-link" data-previewable>bytes-like object</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/callable/" class="stretched-link" data-previewable>callable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/callback/" class="stretched-link" data-previewable>callback</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/camel-case/" class="stretched-link" data-previewable>camel case</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/class/" class="stretched-link" data-previewable>class</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/class-method/" class="stretched-link" data-previewable>class method</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/closure/" class="stretched-link" data-previewable>closure</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/cls/" class="stretched-link" data-previewable><code>cls</code> (argument)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/code-style/" class="stretched-link" data-previewable>code style</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/collection/" class="stretched-link" data-previewable>collection</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/command-line-interface/" class="stretched-link" data-previewable>command-line interface (CLI)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/comment/" class="stretched-link" data-previewable>comment</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/composition/" class="stretched-link" data-previewable>composition</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/comprehension/" class="stretched-link" data-previewable>comprehension</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/concatenation/" class="stretched-link" data-previewable>concatenation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/concurrency/" class="stretched-link" data-previewable>concurrency</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/console/" class="stretched-link" data-previewable>console</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/context-manager/" class="stretched-link" data-previewable>context manager</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/control-flow/" class="stretched-link" data-previewable>control flow</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/coroutine/" class="stretched-link" data-previewable>coroutine</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/coroutine-function/" class="stretched-link" data-previewable>coroutine function</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/cpu-bound-task/" class="stretched-link" data-previewable>CPU-bound task</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/cpython/" class="stretched-link" data-previewable>CPython</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/data-class/" class="stretched-link" data-previewable>data class</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/dataframe/" class="stretched-link" data-previewable>DataFrame</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/data-structure/" class="stretched-link" data-previewable>data structure</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/debugging/" class="stretched-link" data-previewable>debugging</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/decorator/" class="stretched-link" data-previewable>decorator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/deep-copy/" class="stretched-link" data-previewable>deep copy</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/dependency/" class="stretched-link" data-previewable>dependency</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/descriptor/" class="stretched-link" data-previewable>descriptor</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/dictionary/" class="stretched-link" data-previewable>dictionary</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/dictionary-view/" class="stretched-link" data-previewable>dictionary view</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/docstring/" class="stretched-link" data-previewable>docstring</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/dot-notation/" class="stretched-link" data-previewable>dot notation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/duck-typing/" class="stretched-link" data-previewable>duck typing</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/eafp/" class="stretched-link" data-previewable>EAFP</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/encapsulation/" class="stretched-link" data-previewable>encapsulation</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/escape-sequence/" class="stretched-link" data-previewable>escape sequence</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/exception/" class="stretched-link" data-previewable>exception</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/expression/" class="stretched-link" data-previewable>expression</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/f-string/" class="stretched-link" data-previewable>f-string</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/function/" class="stretched-link" data-previewable>function</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/functional-programming/" class="stretched-link" data-previewable>functional programming</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/function-annotation/" class="stretched-link" data-previewable>function annotation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/garbage-collection/" class="stretched-link" data-previewable>garbage collection</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/generator/" class="stretched-link" data-previewable>generator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/generator-expression/" class="stretched-link" data-previewable>generator expression</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/generator-iterator/" class="stretched-link" data-previewable>generator iterator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/generic-function/" class="stretched-link" data-previewable>generic function</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/generic-type/" class="stretched-link" data-previewable>generic type</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/gil/" class="stretched-link" data-previewable>Global Interpreter Lock (GIL)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/global-variable/" class="stretched-link" data-previewable>global variable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/graphical-user-interface/" class="stretched-link" data-previewable>graphical user interface (GUI)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/hashable/" class="stretched-link" data-previewable>hashable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/higher-order-function/" class="stretched-link" data-previewable>higher-order function</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/identifier/" class="stretched-link" data-previewable>identifier</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/idle/" class="stretched-link" data-previewable>IDLE</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/immutable/" class="stretched-link" data-previewable>immutable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/import-path/" class="stretched-link" data-previewable>import path</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/indentation/" class="stretched-link" data-previewable>indentation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/indexing/" class="stretched-link" data-previewable>indexing</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/inheritance/" class="stretched-link" data-previewable>inheritance</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/input-output/" class="stretched-link" data-previewable>input/output (I/O)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/instance/" class="stretched-link" data-previewable>instance</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/ide/" class="stretched-link" data-previewable>integrated development environment (IDE)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/interpreter/" class="stretched-link" data-previewable>interpreter</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/interpreter-shutdown/" class="stretched-link" data-previewable>interpreter shutdown</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/introspection/" class="stretched-link" data-previewable>introspection</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/io-bound-task/" class="stretched-link" data-previewable>I/O-bound task</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/iterable/" class="stretched-link" data-previewable>iterable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/iteration/" class="stretched-link" data-previewable>iteration</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/iterator/" class="stretched-link" data-previewable>iterator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/json/" class="stretched-link" data-previewable>JavaScript Object Notation (JSON)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/jit-compiler/" class="stretched-link" data-previewable>JIT compiler</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/kwargs/" class="stretched-link" data-previewable><code>kwargs</code> (keyword arguments)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/lbyl/" class="stretched-link" data-previewable>LBYL</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/linter/" class="stretched-link" data-previewable>linter</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/literal/" class="stretched-link" data-previewable>literal</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/loader/" class="stretched-link" data-previewable>loader</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/local-variable/" class="stretched-link" data-previewable>local variable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/loop/" class="stretched-link" data-previewable>loop</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/magic-method/" class="stretched-link" data-previewable>magic method</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/mapping/" class="stretched-link" data-previewable>mapping</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/metaprogramming/" class="stretched-link" data-previewable>metaprogramming</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/method/" class="stretched-link" data-previewable>method</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/method-overriding/" class="stretched-link" data-previewable>method overriding</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/mro/" class="stretched-link" data-previewable>method resolution order (MRO)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/module/" class="stretched-link" data-previewable>module</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/mutable/" class="stretched-link" data-previewable>mutable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/named-tuple/" class="stretched-link" data-previewable>named tuple</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/name-mangling/" class="stretched-link" data-previewable>name mangling</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/namespace/" class="stretched-link" data-previewable>namespace</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/namespace-package/" class="stretched-link" data-previewable>namespace package</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/nested-scope/" class="stretched-link" data-previewable>nested scope</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/non-blocking-operation/" class="stretched-link" data-previewable>non-blocking operation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/non-public-name/" class="stretched-link" data-previewable>non-public name</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/object/" class="stretched-link" data-previewable>object</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/oop/" class="stretched-link" data-previewable>object-oriented programming (OOP)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/package/" class="stretched-link" data-previewable>package</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/parameter/" class="stretched-link" data-previewable>parameter</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/pep-8/" class="stretched-link" data-previewable>PEP 8</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/pip/" class="stretched-link" data-previewable>pip</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/polymorphism/" class="stretched-link" data-previewable>polymorphism</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/protocol/" class="stretched-link" data-previewable>protocol</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/protocol-special-methods/" class="stretched-link" data-previewable>protocol (special methods)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/protocol-subtyping/" class="stretched-link" data-previewable>protocol (subtyping)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/public-name/" class="stretched-link" data-previewable>public name</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/pycon/" class="stretched-link" data-previewable>PyCon</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/python/" class="stretched-link" data-previewable>Python</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/pep/" class="stretched-link" data-previewable>Python Enhancement Proposal (PEP)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/pythonic/" class="stretched-link" data-previewable>Pythonic</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/python-org/" class="stretched-link" data-previewable>python.org</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/pypi/" class="stretched-link" data-previewable>Python Package Index (PyPI)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/psf/" class="stretched-link" data-previewable>Python Software Foundation (PSF)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/python-steering-council/" class="stretched-link" data-previewable>Python Steering Council</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/queue/" class="stretched-link" data-previewable>queue</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/raw-string/" class="stretched-link" data-previewable>raw string</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/recursion/" class="stretched-link" data-previewable>recursion</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/reference-count/" class="stretched-link" data-previewable>reference count</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/relative-import/" class="stretched-link" data-previewable>relative import</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/repl/" class="stretched-link" data-previewable>REPL</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/scope/" class="stretched-link" data-previewable>scope</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/self/" class="stretched-link" data-previewable><code>self</code> (argument)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/sequence/" class="stretched-link" data-previewable>sequence</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/shallow-copy/" class="stretched-link" data-previewable>shallow copy</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/slice/" class="stretched-link" data-previewable>slice</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/slicing/" class="stretched-link" data-previewable>slicing</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/snake-case/" class="stretched-link" data-previewable>snake case</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/soft-keyword/" class="stretched-link" data-previewable>soft keyword</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/source-code/" class="stretched-link" data-previewable>source code</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/stack/" class="stretched-link" data-previewable>stack</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/standard-library/" class="stretched-link" data-previewable>standard library</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/statement/" class="stretched-link" data-previewable>statement</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/static-method/" class="stretched-link" data-previewable>static method</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/static-type-checker/" class="stretched-link" data-previewable>static type checker</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/string-representation/" class="stretched-link" data-previewable>string representation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/subclass/" class="stretched-link" data-previewable>subclass</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/text-encoding/" class="stretched-link" data-previewable>text encoding</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/text-file/" class="stretched-link" data-previewable>text file</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/thread/" class="stretched-link" data-previewable>thread</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/traceback/" class="stretched-link" data-previewable>traceback</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/transitive-dependency/" class="stretched-link" data-previewable>transitive dependency</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/triple-quoted-string/" class="stretched-link" data-previewable>triple-quoted string</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/type/" class="stretched-link" data-previewable>type</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/type-alias/" class="stretched-link" data-previewable>type alias</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/type-hint/" class="stretched-link" data-previewable>type hint</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/unicode/" class="stretched-link" data-previewable>Unicode</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/universal-newlines/" class="stretched-link" data-previewable>universal newlines</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/unpacking/" class="stretched-link" data-previewable>unpacking</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/variable/" class="stretched-link" data-previewable>variable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/variable-annotation/" class="stretched-link" data-previewable>variable annotation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/virtual-environment/" class="stretched-link" data-previewable>virtual environment</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/virtual-machine/" class="stretched-link" data-previewable>virtual machine (VM)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/wheel/" class="stretched-link" data-previewable>wheel</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/wildcard-import/" class="stretched-link" data-previewable>wildcard import</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/glossary/zen-of-python/" class="stretched-link" data-previewable>Zen of Python</a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/keywords/" data-previewable>Python Keywords</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/and/" class="stretched-link" data-previewable><code>and</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/as/" class="stretched-link" data-previewable><code>as</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/assert/" class="stretched-link" data-previewable><code>assert</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/async/" class="stretched-link" data-previewable><code>async</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/await/" class="stretched-link" data-previewable><code>await</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/break/" class="stretched-link" data-previewable><code>break</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/case/" class="stretched-link" data-previewable><code>case</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/class/" class="stretched-link" data-previewable><code>class</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/continue/" class="stretched-link" data-previewable><code>continue</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/def/" class="stretched-link" data-previewable><code>def</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/del/" class="stretched-link" data-previewable><code>del</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/elif/" class="stretched-link" data-previewable><code>elif</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/else/" class="stretched-link" data-previewable><code>else</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/except/" class="stretched-link" data-previewable><code>except</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/false/" class="stretched-link" data-previewable><code>False</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/finally/" class="stretched-link" data-previewable><code>finally</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/for/" class="stretched-link" data-previewable><code>for</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/from/" class="stretched-link" data-previewable><code>from</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/global/" class="stretched-link" data-previewable><code>global</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/if/" class="stretched-link" data-previewable><code>if</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/import/" class="stretched-link" data-previewable><code>import</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/in/" class="stretched-link" data-previewable><code>in</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/is/" class="stretched-link" data-previewable><code>is</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/lambda/" class="stretched-link" data-previewable><code>lambda</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/match/" class="stretched-link" data-previewable><code>match</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/none/" class="stretched-link" data-previewable><code>None</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/nonlocal/" class="stretched-link" data-previewable><code>nonlocal</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/not/" class="stretched-link" data-previewable><code>not</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/or/" class="stretched-link" data-previewable><code>or</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/pass/" class="stretched-link" data-previewable><code>pass</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/raise/" class="stretched-link" data-previewable><code>raise</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/return/" class="stretched-link" data-previewable><code>return</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/true/" class="stretched-link" data-previewable><code>True</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/try/" class="stretched-link" data-previewable><code>try</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/type/" class="stretched-link" data-previewable><code>type</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/underscore/" class="stretched-link" data-previewable>underscore (<code>_</code>)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/while/" class="stretched-link" data-previewable><code>while</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/with/" class="stretched-link" data-previewable><code>with</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/keywords/yield/" class="stretched-link" data-previewable><code>yield</code></a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/builtin-types/" data-previewable>Python’s Built-in Data Types</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/bytearray/" class="stretched-link" data-previewable><code>bytearray</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/bytes/" class="stretched-link" data-previewable><code>bytes</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/complex/" class="stretched-link" data-previewable><code>complex</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/dict/" class="stretched-link" data-previewable><code>dict</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/float/" class="stretched-link" data-previewable><code>float</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/frozenset/" class="stretched-link" data-previewable><code>frozenset</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/int/" class="stretched-link" data-previewable><code>int</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/list/" class="stretched-link" data-previewable><code>list</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/object/" class="stretched-link" data-previewable><code>object</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/range/" class="stretched-link" data-previewable><code>range</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/set/" class="stretched-link" data-previewable><code>set</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/str/" class="stretched-link" data-previewable><code>str</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-types/tuple/" class="stretched-link" data-previewable><code>tuple</code></a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/builtin-exceptions/" data-previewable>Python’s Built-in Exceptions</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/arithmeticerror/" class="stretched-link" data-previewable><code>ArithmeticError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/assertionerror/" class="stretched-link" data-previewable><code>AssertionError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/attributeerror/" class="stretched-link" data-previewable><code>AttributeError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/baseexception/" class="stretched-link" data-previewable><code>BaseException</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/baseexceptiongroup/" class="stretched-link" data-previewable><code>BaseExceptionGroup</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/blockingioerror/" class="stretched-link" data-previewable><code>BlockingIOError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/brokenpipeerror/" class="stretched-link" data-previewable><code>BrokenPipeError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/buffererror/" class="stretched-link" data-previewable><code>BufferError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/childprocesserror/" class="stretched-link" data-previewable><code>ChildProcessError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/connectionabortederror/" class="stretched-link" data-previewable><code>ConnectionAbortedError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/connectionerror/" class="stretched-link" data-previewable><code>ConnectionError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/connectionrefusederror/" class="stretched-link" data-previewable><code>ConnectionRefusedError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/connectionreseterror/" class="stretched-link" data-previewable><code>ConnectionResetError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/eoferror/" class="stretched-link" data-previewable><code>EOFError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/exception/" class="stretched-link" data-previewable><code>Exception</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/fileexistserror/" class="stretched-link" data-previewable><code>FileExistsError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/filenotfounderror/" class="stretched-link" data-previewable><code>FileNotFoundError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/floatingpointerror/" class="stretched-link" data-previewable><code>FloatingPointError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/generatorexit/" class="stretched-link" data-previewable><code>GeneratorExit</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/importerror/" class="stretched-link" data-previewable><code>ImportError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/indentationerror/" class="stretched-link" data-previewable><code>IndentationError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/indexerror/" class="stretched-link" data-previewable><code>IndexError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/interruptederror/" class="stretched-link" data-previewable><code>InterruptedError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/ioerror/" class="stretched-link" data-previewable><code>IOError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/isadirectoryerror/" class="stretched-link" data-previewable><code>IsADirectoryError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/keyboardinterrupt/" class="stretched-link" data-previewable><code>KeyboardInterrupt</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/keyerror/" class="stretched-link" data-previewable><code>KeyError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/lookuperror/" class="stretched-link" data-previewable><code>LookupError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/memoryerror/" class="stretched-link" data-previewable><code>MemoryError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/modulenotfounderror/" class="stretched-link" data-previewable><code>ModuleNotFoundError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/nameerror/" class="stretched-link" data-previewable><code>NameError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/notadirectoryerror/" class="stretched-link" data-previewable><code>NotADirectoryError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/notimplementederror/" class="stretched-link" data-previewable><code>NotImplementedError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/oserror/" class="stretched-link" data-previewable><code>OSError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/overflowerror/" class="stretched-link" data-previewable><code>OverflowError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/permissionerror/" class="stretched-link" data-previewable><code>PermissionError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/recursionerror/" class="stretched-link" data-previewable><code>RecursionError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/runtimeerror/" class="stretched-link" data-previewable><code>RuntimeError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/stopasynciteration/" class="stretched-link" data-previewable><code>StopAsyncIteration</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/stopiteration/" class="stretched-link" data-previewable><code>StopIteration</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/syntaxerror/" class="stretched-link" data-previewable><code>SyntaxError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/systemexit/" class="stretched-link" data-previewable><code>SystemExit</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/taberror/" class="stretched-link" data-previewable><code>TabError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/timeouterror/" class="stretched-link" data-previewable><code>TimeoutError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/typeerror/" class="stretched-link" data-previewable><code>TypeError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/valueerror/" class="stretched-link" data-previewable><code>ValueError</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-exceptions/zerodivisionerror/" class="stretched-link" data-previewable><code>ZeroDivisionError</code></a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/builtin-functions/" data-previewable>Python’s Built-in Functions</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/abs/" class="stretched-link" data-previewable><code>abs()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/aiter/" class="stretched-link" data-previewable><code>aiter()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/all/" class="stretched-link" data-previewable><code>all()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/anext/" class="stretched-link" data-previewable><code>anext()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/any/" class="stretched-link" data-previewable><code>any()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/ascii/" class="stretched-link" data-previewable><code>ascii()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/bin/" class="stretched-link" data-previewable><code>bin()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/bool/" class="stretched-link" data-previewable><code>bool()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/breakpoint/" class="stretched-link" data-previewable><code>breakpoint()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/callable/" class="stretched-link" data-previewable><code>callable()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/chr/" class="stretched-link" data-previewable><code>chr()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/classmethod/" class="stretched-link" data-previewable><code>classmethod()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/compile/" class="stretched-link" data-previewable><code>compile()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/delattr/" class="stretched-link" data-previewable><code>delattr()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/dir/" class="stretched-link" data-previewable><code>dir()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/divmod/" class="stretched-link" data-previewable><code>divmod()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/enumerate/" class="stretched-link" data-previewable><code>enumerate()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/eval/" class="stretched-link" data-previewable><code>eval()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/exec/" class="stretched-link" data-previewable><code>exec()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/filter/" class="stretched-link" data-previewable><code>filter()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/format/" class="stretched-link" data-previewable><code>format()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/getattr/" class="stretched-link" data-previewable><code>getattr()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/globals/" class="stretched-link" data-previewable><code>globals()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/hasattr/" class="stretched-link" data-previewable><code>hasattr()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/hash/" class="stretched-link" data-previewable><code>hash()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/help/" class="stretched-link" data-previewable><code>help()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/hex/" class="stretched-link" data-previewable><code>hex()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/id/" class="stretched-link" data-previewable><code>id()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/import/" class="stretched-link" data-previewable><code>__import__()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/input/" class="stretched-link" data-previewable><code>input()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/isinstance/" class="stretched-link" data-previewable><code>isinstance()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/issubclass/" class="stretched-link" data-previewable><code>issubclass()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/iter/" class="stretched-link" data-previewable><code>iter()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/len/" class="stretched-link" data-previewable><code>len()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/locals/" class="stretched-link" data-previewable><code>locals()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/map/" class="stretched-link" data-previewable><code>map()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/max/" class="stretched-link" data-previewable><code>max()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/memoryview/" class="stretched-link" data-previewable><code>memoryview()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/min/" class="stretched-link" data-previewable><code>min()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/next/" class="stretched-link" data-previewable><code>next()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/oct/" class="stretched-link" data-previewable><code>oct()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/open/" class="stretched-link" data-previewable><code>open()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/ord/" class="stretched-link" data-previewable><code>ord()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/pow/" class="stretched-link" data-previewable><code>pow()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/print/" class="stretched-link" data-previewable><code>print()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/property/" class="stretched-link" data-previewable><code>property()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/repr/" class="stretched-link" data-previewable><code>repr()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/reversed/" class="stretched-link" data-previewable><code>reversed()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/round/" class="stretched-link" data-previewable><code>round()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/setattr/" class="stretched-link" data-previewable><code>setattr()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/slice/" class="stretched-link" data-previewable><code>slice()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/sorted/" class="stretched-link" data-previewable><code>sorted()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/staticmethod/" class="stretched-link" data-previewable><code>staticmethod()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/sum/" class="stretched-link" data-previewable><code>sum()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/super/" class="stretched-link" data-previewable><code>super()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/type/" class="stretched-link" data-previewable><code>type()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/vars/" class="stretched-link" data-previewable><code>vars()</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/builtin-functions/zip/" class="stretched-link" data-previewable><code>zip()</code></a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/stdlib/" data-previewable>Python Standard Library</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/abc/" class="stretched-link" data-previewable><code>abc</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/argparse/" class="stretched-link" data-previewable><code>argparse</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/array/" class="stretched-link" data-previewable><code>array</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/ast/" class="stretched-link" data-previewable><code>ast</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/asyncio/" class="stretched-link" data-previewable><code>asyncio</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/atexit/" class="stretched-link" data-previewable><code>atexit</code></a>
+            
+          </li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/calendar/" class="stretched-link" data-previewable><code>calendar</code></a>
+            
+          </li>
+        
+      
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/collections/" class="stretched-link" data-previewable><code>collections</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/configparser/" class="stretched-link" data-previewable><code>configparser</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/contextlib/" class="stretched-link" data-previewable><code>contextlib</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/contextvars/" class="stretched-link" data-previewable><code>contextvars</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/copy/" class="stretched-link" data-previewable><code>copy</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/cprofile/" class="stretched-link" data-previewable><code>cProfile</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/csv/" class="stretched-link" data-previewable><code>csv</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/dataclasses/" class="stretched-link" data-previewable><code>dataclasses</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/datetime/" class="stretched-link" data-previewable><code>datetime</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/decimal/" class="stretched-link" data-previewable><code>decimal</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/doctest/" class="stretched-link" data-previewable><code>doctest</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/email/" class="stretched-link" data-previewable><code>email</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/enum/" class="stretched-link" data-previewable><code>enum</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/fractions/" class="stretched-link" data-previewable><code>fractions</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/functools/" class="stretched-link" data-previewable><code>functools</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/gc/" class="stretched-link" data-previewable><code>gc</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/gettext/" class="stretched-link" data-previewable><code>gettext</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/glob/" class="stretched-link" data-previewable><code>glob</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/hashlib/" class="stretched-link" data-previewable><code>hashlib</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/heapq/" class="stretched-link" data-previewable><code>heapq</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/html/" class="stretched-link" data-previewable><code>html</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/http/" class="stretched-link" data-previewable><code>http</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/imaplib/" class="stretched-link" data-previewable><code>imaplib</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/importlib/" class="stretched-link" data-previewable><code>importlib</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/inspect/" class="stretched-link" data-previewable><code>inspect</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/io/" class="stretched-link" data-previewable><code>io</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/ipaddress/" class="stretched-link" data-previewable><code>ipaddress</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/itertools/" class="stretched-link" data-previewable><code>itertools</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/json/" class="stretched-link" data-previewable><code>json</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/keyword/" class="stretched-link" data-previewable><code>keyword</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/locale/" class="stretched-link" data-previewable><code>locale</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/logging/" class="stretched-link" data-previewable><code>logging</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/math/" class="stretched-link" data-previewable><code>math</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/mimetypes/" class="stretched-link" data-previewable><code>mimetypes</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/mmap/" class="stretched-link" data-previewable><code>mmap</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/multiprocessing/" class="stretched-link" data-previewable><code>multiprocessing</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/numbers/" class="stretched-link" data-previewable><code>numbers</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/operator/" class="stretched-link" data-previewable><code>operator</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/os/" class="stretched-link" data-previewable><code>os</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/pathlib/" class="stretched-link" data-previewable><code>pathlib</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/pickle/" class="stretched-link" data-previewable><code>pickle</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/platform/" class="stretched-link" data-previewable><code>platform</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/pprint/" class="stretched-link" data-previewable><code>pprint</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/queue/" class="stretched-link" data-previewable><code>queue</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/random/" class="stretched-link" data-previewable><code>random</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/re/" class="stretched-link" data-previewable><code>re</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/secrets/" class="stretched-link" data-previewable><code>secrets</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/shutil/" class="stretched-link" data-previewable><code>shutil</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/socket/" class="stretched-link" data-previewable><code>socket</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/sqlite3/" class="stretched-link" data-previewable><code>sqlite3</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/string/" class="stretched-link" data-previewable><code>string</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/subprocess/" class="stretched-link" data-previewable><code>subprocess</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/sys/" class="stretched-link" data-previewable><code>sys</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/sysconfig/" class="stretched-link" data-previewable><code>sysconfig</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/tarfile/" class="stretched-link" data-previewable><code>tarfile</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/tempfile/" class="stretched-link" data-previewable><code>tempfile</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/threading/" class="stretched-link" data-previewable><code>threading</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/time/" class="stretched-link" data-previewable><code>time</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/timeit/" class="stretched-link" data-previewable><code>timeit</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/tkinter/" class="stretched-link" data-previewable><code>tkinter</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/tomllib/" class="stretched-link" data-previewable><code>tomllib</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/traceback/" class="stretched-link" data-previewable><code>traceback</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/turtle/" class="stretched-link" data-previewable><code>turtle</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/typing/" class="stretched-link" data-previewable><code>typing</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/unittest/" class="stretched-link" data-previewable><code>unittest</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/urllib/" class="stretched-link" data-previewable><code>urllib</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/uuid/" class="stretched-link" data-previewable><code>uuid</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/venv/" class="stretched-link" data-previewable><code>venv</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/wave/" class="stretched-link" data-previewable><code>wave</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/weakref/" class="stretched-link" data-previewable><code>weakref</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/webbrowser/" class="stretched-link" data-previewable><code>webbrowser</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/xml/" class="stretched-link" data-previewable><code>xml</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/zipapp/" class="stretched-link" data-previewable><code>zipapp</code></a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/stdlib/zipfile/" class="stretched-link" data-previewable><code>zipfile</code></a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/tools/" data-previewable>Python Tools</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/anaconda/" class="stretched-link" data-previewable>Anaconda</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/anaconda-navigator/" class="stretched-link" data-previewable>Anaconda Navigator</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/bandit/" class="stretched-link" data-previewable>Bandit</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/black/" class="stretched-link" data-previewable>Black</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/bpython/" class="stretched-link" data-previewable>bpython</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/build/" class="stretched-link" data-previewable>build</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/conda/" class="stretched-link" data-previewable>Conda</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/cookiecutter/" class="stretched-link" data-previewable>Cookiecutter</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/coverage-py/" class="stretched-link" data-previewable>Coverage.py</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/doit/" class="stretched-link" data-previewable>doit</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/flake8/" class="stretched-link" data-previewable>flake8</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/flit/" class="stretched-link" data-previewable>flit</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/git/" class="stretched-link" data-previewable>Git</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/hatch/" class="stretched-link" data-previewable>Hatch</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/invoke/" class="stretched-link" data-previewable>Invoke</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/ipython/" class="stretched-link" data-previewable>IPython</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/isort/" class="stretched-link" data-previewable>isort</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/line-profiler/" class="stretched-link" data-previewable>line_profiler</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/mkdocs/" class="stretched-link" data-previewable>MkDocs</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/mypy/" class="stretched-link" data-previewable>mypy</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/nox/" class="stretched-link" data-previewable>Nox</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pdm/" class="stretched-link" data-previewable>pdm</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pipenv/" class="stretched-link" data-previewable>Pipenv</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pip-tools/" class="stretched-link" data-previewable>pip-tools</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pipx/" class="stretched-link" data-previewable>pipx</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/poetry/" class="stretched-link" data-previewable>Poetry</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/poetry-core/" class="stretched-link" data-previewable>poetry-core</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pre-commit/" class="stretched-link" data-previewable>pre-commit</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/ptpython/" class="stretched-link" data-previewable>ptpython</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pyenv/" class="stretched-link" data-previewable>pyenv</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pyinstaller/" class="stretched-link" data-previewable>PyInstaller</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pylint/" class="stretched-link" data-previewable>Pylint</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/py-spy/" class="stretched-link" data-previewable>py-spy</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/pytest/" class="stretched-link" data-previewable>pytest</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/ruff/" class="stretched-link" data-previewable>Ruff</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/setuptools/" class="stretched-link" data-previewable>setuptools</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/sphinx/" class="stretched-link" data-previewable>Sphinx</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/tox/" class="stretched-link" data-previewable>tox</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/twine/" class="stretched-link" data-previewable>twine</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/ty/" class="stretched-link" data-previewable>ty</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/uv/" class="stretched-link" data-previewable>uv</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/tools/wheel/" class="stretched-link" data-previewable>wheel</a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/best-practices/" data-previewable>Python Best Practices</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/classes/" class="stretched-link" data-previewable>classes</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/code-formatting/" class="stretched-link" data-previewable>code formatting</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/code-testing/" class="stretched-link" data-previewable>code testing</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/coding-style/" class="stretched-link" data-previewable>coding style</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/comments/" class="stretched-link" data-previewable>comments</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/comprehensions/" class="stretched-link" data-previewable>comprehensions</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/concurrency/" class="stretched-link" data-previewable>concurrency</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/conditionals/" class="stretched-link" data-previewable>conditionals</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/constants/" class="stretched-link" data-previewable>constants</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/dependency-management/" class="stretched-link" data-previewable>dependency management</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/distribution/" class="stretched-link" data-previewable>distribution</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/docstrings/" class="stretched-link" data-previewable>docstrings</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/documentation/" class="stretched-link" data-previewable>documentation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/exception-handling/" class="stretched-link" data-previewable>exception handling</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/functions/" class="stretched-link" data-previewable>functions</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/generator-expressions/" class="stretched-link" data-previewable>generator expressions</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/imports/" class="stretched-link" data-previewable>imports</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/logging/" class="stretched-link" data-previewable>logging</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/loops/" class="stretched-link" data-previewable>loops</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/object-mutability/" class="stretched-link" data-previewable>object mutability</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/optimization/" class="stretched-link" data-previewable>optimization</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/project-layout/" class="stretched-link" data-previewable>project layout</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/public-api-surface/" class="stretched-link" data-previewable>public API surface</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/pythonic-code/" class="stretched-link" data-previewable>Pythonic code</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/refactoring/" class="stretched-link" data-previewable>refactoring</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/resource-management/" class="stretched-link" data-previewable>resource management</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/security/" class="stretched-link" data-previewable>security</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/stdlib/" class="stretched-link" data-previewable>standard library</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/third-party-libraries/" class="stretched-link" data-previewable>third-party libraries</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/type-checking/" class="stretched-link" data-previewable>type checking</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/variables/" class="stretched-link" data-previewable>variables</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/version-control/" class="stretched-link" data-previewable>version control (source control)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/best-practices/virtual-environments/" class="stretched-link" data-previewable>virtual environments</a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/code-editors-ides/" data-previewable>Code Editors &amp; IDEs</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/emacs/" class="stretched-link" data-previewable>Emacs</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/jupyterlab/" class="stretched-link" data-previewable>JupyterLab</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/jupyter-notebook/" class="stretched-link" data-previewable>Jupyter Notebook</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/neovim/" class="stretched-link" data-previewable>Neovim</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/notepad-plus-plus/" class="stretched-link" data-previewable>Notepad++</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/positron/" class="stretched-link" data-previewable>Positron</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/pycharm/" class="stretched-link" data-previewable>PyCharm</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/spyder/" class="stretched-link" data-previewable>Spyder</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/sublime-text/" class="stretched-link" data-previewable>Sublime Text</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/thonny/" class="stretched-link" data-previewable>Thonny</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/vim/" class="stretched-link" data-previewable>Vim</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/visual-studio-code/" class="stretched-link" data-previewable>Visual Studio Code</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/code-editors-ides/wing-ide/" class="stretched-link" data-previewable>Wing IDE</a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/ai-coding-glossary/" data-previewable>AI Coding Glossary</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/activation-function/" class="stretched-link" data-previewable>activation function</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/agent/" class="stretched-link" data-previewable>agent</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/agentic-coding/" class="stretched-link" data-previewable>agentic coding</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/ai/" class="stretched-link" data-previewable>artificial intelligence (AI)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/attention-mechanism/" class="stretched-link" data-previewable>attention mechanism</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/augmented-coding/" class="stretched-link" data-previewable>augmented coding</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/autoregressive-generation/" class="stretched-link" data-previewable>autoregressive generation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/bias/" class="stretched-link" data-previewable>bias</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/chain-of-thought/" class="stretched-link" data-previewable>chain of thought (CoT)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/context-engineering/" class="stretched-link" data-previewable>context engineering</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/context-window/" class="stretched-link" data-previewable>context window</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/convolutional-network/" class="stretched-link" data-previewable>convolutional network</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/embedding/" class="stretched-link" data-previewable>embedding</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/evaluation/" class="stretched-link" data-previewable>evaluation</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/few-shot-learning/" class="stretched-link" data-previewable>few-shot learning</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/fine-tuning/" class="stretched-link" data-previewable>fine-tuning</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/function-calling/" class="stretched-link" data-previewable>function calling</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/generative-model/" class="stretched-link" data-previewable>generative model</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/gpt/" class="stretched-link" data-previewable>generative pre-trained transformer (GPT)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/gradient-descent/" class="stretched-link" data-previewable>gradient descent</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/guardrails/" class="stretched-link" data-previewable>guardrails</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/hallucination/" class="stretched-link" data-previewable>hallucination</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/in-context-learning/" class="stretched-link" data-previewable>in-context learning</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/inference/" class="stretched-link" data-previewable>inference</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/jailbreak/" class="stretched-link" data-previewable>jailbreak</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/llm/" class="stretched-link" data-previewable>large language model (LLM)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/lrm/" class="stretched-link" data-previewable>large reasoning model (LRM)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/latency/" class="stretched-link" data-previewable>latency</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/llm-observability/" class="stretched-link" data-previewable>LLM observability</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/loss-function/" class="stretched-link" data-previewable>loss function</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/machine-learning/" class="stretched-link" data-previewable>machine learning</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/mcp/" class="stretched-link" data-previewable>Model Context Protocol (MCP)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/nlp/" class="stretched-link" data-previewable>natural language processing (NLP)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/nearest-neighbor/" class="stretched-link" data-previewable>nearest neighbor</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/neural-network/" class="stretched-link" data-previewable>neural network</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/parameter/" class="stretched-link" data-previewable>parameter</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/prompt/" class="stretched-link" data-previewable>prompt</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/prompt-engineering/" class="stretched-link" data-previewable>prompt engineering</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/prompt-injection/" class="stretched-link" data-previewable>prompt injection</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/reasoning-model/" class="stretched-link" data-previewable>reasoning model</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/recurrent-neural-network/" class="stretched-link" data-previewable>recurrent neural network (RNN)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/reinforcement-learning/" class="stretched-link" data-previewable>reinforcement learning</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/retrieval-augmented-generation/" class="stretched-link" data-previewable>retrieval-augmented generation (RAG)</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/self-attention/" class="stretched-link" data-previewable>self-attention</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/structured-output/" class="stretched-link" data-previewable>structured output</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/system-prompt/" class="stretched-link" data-previewable>system prompt</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/tagging/" class="stretched-link" data-previewable>tagging</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/telemetry/" class="stretched-link" data-previewable>telemetry</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/temperature/" class="stretched-link" data-previewable>temperature</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/tensor-parameter/" class="stretched-link" data-previewable>tensor parameter</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/text-corpora/" class="stretched-link" data-previewable>text corpora</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/throughput/" class="stretched-link" data-previewable>throughput</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/token/" class="stretched-link" data-previewable>token</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/tokenization/" class="stretched-link" data-previewable>tokenization</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/tool-use/" class="stretched-link" data-previewable>tool use</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/training/" class="stretched-link" data-previewable>training</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/transformer/" class="stretched-link" data-previewable>transformer</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/transformer-architecture/" class="stretched-link" data-previewable>transformer architecture</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/vector/" class="stretched-link" data-previewable>vector</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/vector-database/" class="stretched-link" data-previewable>vector database</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/vector-space/" class="stretched-link" data-previewable>vector space</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/vibe-coding/" class="stretched-link" data-previewable>vibe coding</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/weight/" class="stretched-link" data-previewable>weight</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-glossary/zero-shot-learning/" class="stretched-link" data-previewable>zero-shot learning</a>
+            
+          </li>
+        
+      
+    </ul>
+  
+    <h3 class="h5 font-weight-bold small mt-4"><a href="/ref/ai-coding-tools/" data-previewable>AI Coding Tools</a><span class="ml-1 text-black-50 user-select-none">/</span></h3>
+    <ul class="list-group list-group-flush border rounded mt-2 ">
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/aider/" class="stretched-link" data-previewable>Aider</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/amazon-q-developer/" class="stretched-link" data-previewable>Amazon Q Developer</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/amp-code/" class="stretched-link" data-previewable>Amp Code</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/askcodi/" class="stretched-link" data-previewable>AskCodi</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/blackbox-ai/" class="stretched-link" data-previewable>Blackbox AI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/chatgpt/" class="stretched-link" data-previewable>ChatGPT</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/claude/" class="stretched-link" data-previewable>Claude</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/claude-code/" class="stretched-link" data-previewable>Claude Code</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/codegeex/" class="stretched-link" data-previewable>CodeGeeX</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/code-llama/" class="stretched-link" data-previewable>Code Llama</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/codex/" class="stretched-link" data-previewable>Codex</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/codex-cli/" class="stretched-link" data-previewable>Codex CLI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/copilot-cli/" class="stretched-link" data-previewable>Copilot CLI</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/cursor/" class="stretched-link" data-previewable>Cursor</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/cursor-cli/" class="stretched-link" data-previewable>Cursor CLI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/deepcode/" class="stretched-link" data-previewable>DeepCode</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/devin/" class="stretched-link" data-previewable>Devin</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/gemini/" class="stretched-link" data-previewable>Gemini</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/gemini-cli/" class="stretched-link" data-previewable>Gemini CLI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/gemini-code-assist/" class="stretched-link" data-previewable>Gemini Code Assist</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/github-copilot-chat/" class="stretched-link" data-previewable>GitHub Copilot Chat</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/google-antigravity/" class="stretched-link" data-previewable>Google Antigravity</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/grok/" class="stretched-link" data-previewable>Grok</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/jetbrains-ai-assistant/" class="stretched-link" data-previewable>JetBrains AI Assistant</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/jupyter-ai/" class="stretched-link" data-previewable>Jupyter AI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/kilo-code/" class="stretched-link" data-previewable>Kilo Code</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/kiro/" class="stretched-link" data-previewable>Kiro</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/llamaindex/" class="stretched-link" data-previewable>LlamaIndex</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/lm-studio/" class="stretched-link" data-previewable>LM Studio</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/lovable/" class="stretched-link" data-previewable>Lovable</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/microsoft-copilot/" class="stretched-link" data-previewable>Microsoft Copilot</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/ollama/" class="stretched-link" data-previewable>Ollama</a>
+            
+          </li>
+        
+      
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/opencode/" class="stretched-link" data-previewable>OpenCode</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/open-interpreter/" class="stretched-link" data-previewable>Open Interpreter</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/overflowai/" class="stretched-link" data-previewable>OverflowAI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/pi/" class="stretched-link" data-previewable>Pi</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/pydantic-ai/" class="stretched-link" data-previewable>Pydantic AI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/replit-ai/" class="stretched-link" data-previewable>Replit AI</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/repo-prompt/" class="stretched-link" data-previewable>Repo Prompt</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/sourcegraph-cody/" class="stretched-link" data-previewable>Sourcegraph Cody</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/tabnine/" class="stretched-link" data-previewable>Tabnine</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/visual-studio-intellicode/" class="stretched-link" data-previewable>Visual Studio IntelliCode</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/warp/" class="stretched-link" data-previewable>Warp</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/windsurf/" class="stretched-link" data-previewable>Windsurf</a>
+            
+          </li>
+        
+      
+        
+          <li class="list-group-item list-group-item-action rounded-top">
+            <a href="/ref/ai-coding-tools/zed/" class="stretched-link" data-previewable>Zed</a>
+            
+          </li>
+        
+      
+    </ul>
+  
+</reference-sidebar>
+
+
+    
+  </aside>
+
+  <div class="col-md-11 col-lg-8 article mb-4 pl-lg-4 text-wrap-pretty">
+    
+  
+  <h1 class="mt-0 mb-0">Reference</h1>
+  <h2 class="h3 my-0 text-muted mb-4">Concise definitions for common Python terms</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 mb-4 mx-lg-1 align-items-stretch">
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python Glossary</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Concise explanations of fundamental Python concepts and terminology.</p>
+    <a href="/ref/glossary/" class="card-link stretched-link mt-auto">View 185 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python Keywords</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Special reserved words that have specific meaning in Python code.</p>
+    <a href="/ref/keywords/" class="card-link stretched-link mt-auto">View 39 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python’s Built-in Data Types</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Fundamental building blocks used to store and manipulate different kinds of data with Python.</p>
+    <a href="/ref/builtin-types/" class="card-link stretched-link mt-auto">View 13 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python’s Built-in Exceptions</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Predefined error classes that the Python interpreter uses to handle various error conditions.</p>
+    <a href="/ref/builtin-exceptions/" class="card-link stretched-link mt-auto">View 47 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python’s Built-in Functions</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Core functions available for use in any Python program without needing to import any external libraries.</p>
+    <a href="/ref/builtin-functions/" class="card-link stretched-link mt-auto">View 58 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python Standard Library</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Modules and packages included in the Python standard library.</p>
+    <a href="/ref/stdlib/" class="card-link stretched-link mt-auto">View 81 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python Tools</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Learn essential Python tools like pyenv, uv, and IPython with quick, practical guides to boost your daily development.</p>
+    <a href="/ref/tools/" class="card-link stretched-link mt-auto">View 42 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Python Best Practices</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Widely accepted and established guidelines, conventions, tips, and best practices for Python programmers.</p>
+    <a href="/ref/best-practices/" class="card-link stretched-link mt-auto">View 33 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>Code Editors &amp; IDEs</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Popular code editors and IDEs that help you write, run, and debug Python code.</p>
+    <a href="/ref/code-editors-ides/" class="card-link stretched-link mt-auto">View 13 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>AI Coding Glossary</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Concise explanations of foundational terms and concepts for AI-assisted coding.</p>
+    <a href="/ref/ai-coding-glossary/" class="card-link stretched-link mt-auto">View 64 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+      
+      
+      <div class="col pb-2 px-1 d-flex">
+        
+
+<div class="card w-100 h-100 highlight-hover-light shadow-sm">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title font-weight-bold my-0"><span class="icon baseline mr-1 text-warning" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@reference"/></svg></span>AI Coding Tools</h5>
+    <p class="mt-2 card-text text-wrap-pretty">Popular AI coding tools with growing impact on modern software development workflows.</p>
+    <a href="/ref/ai-coding-tools/" class="card-link stretched-link mt-auto">View 45 Terms »</a>
+  </div>
+</div>
+
+
+      </div>
+    
+  </div>
+
+  
+    <h2>Term of the Day</h2>
+    <div class="alert alert-light border shadow-sm mx-2 mb-4">
+      <p>AI Coding Tools<span class="ml-1 user-select-none" style="color:#6c757d!important;">/</span></p>
+      <a href="/ref/ai-coding-tools/jupyter-ai/" class="stretched-link text-body"><h3 class="mt-n3">Jupyter AI</h3></a>
+      <p>A JupyterLab extension that brings generative AI into notebooks.</p>
+      
+    </div>
+  
+
+  <div class="d-flex align-items-center justify-content-end">
+    
+
+<a href="/feedback/realpython-com/?d=eyJwIjoicmVhbHB5dGhvbi1jb20iLCJzaWciOiJPWVgkZDw_aX0hIzw3IX5IPW10NFpTeDNvJXVsYFYzOEwpNUkodHhxIiwidCI6IlJlZmVyZW5jZSIsInUiOiIvcmVmLyJ9" target="_blank"><span class="icon baseline mr-1" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#@feedback"/></svg></span>Share Feedback</a>
+
+  </div>
+
+  </div>
+
+</div>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    
+      
+
+<footer class="footer pb-4">
+  <div class="mx-5">
+
+    <div class="row justify-content-lg-center">
+
+      <div class="mx-4 mt-5">
+        <h5>Learn Python</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/start-here/">Start Here</a></li>
+          <li><a href="/search">Learning Resources</a></li>
+          <li><a href="/mentor/">Code Mentor</a></li>
+          <li><a href="/ref/">Python Reference</a></li>
+          <li><a href="/cheatsheets/python/">Python Cheat Sheet</a></li>
+          <li><a href="https://support.realpython.com/">Support Center</a></li>
+        </ul>
+      </div>
+
+      <div class="mx-4 mt-5">
+        <h5>Courses &amp; Paths</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/learning-paths/">Learning Paths</a></li>
+          <li><a href="/quizzes/">Quizzes &amp; Exercises</a></li>
+          <li><a href="/tutorials/all/">Browse Topics</a></li>
+          <li><a href="/live/">Live Courses</a></li>
+          <li><a href="/books/">Books</a></li>
+        </ul>
+      </div>
+
+      <div class="mx-4 mt-5">
+        <h5>Community</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/podcasts/rpp/">Podcast</a></li>
+          <li><a href="/newsletter/">Newsletter</a></li>
+          <li><a href="/community/">Community Chat</a></li>
+          <li><a href="/office-hours/">Office Hours</a></li>
+          <li><a href="/learner-stories/">Learner Stories</a></li>
+        </ul>
+      </div>
+
+      <div class="mx-4 mt-5">
+        <h5>Membership</h5>
+        <ul class="list-unstyled mb-0">
+          
+            <li><a href="/account/join/">Plans &amp; Pricing</a></li>
+          
+          <li><a href="/account/join-team/">Team Plans</a></li>
+          <li><a href="/account/join-team/inquiry/">For Business</a></li>
+          <li><a href="/account/join-team/education-inquiry/">For Schools</a></li>
+          <li><a href="/learner-stories/">Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="mx-4 mt-5">
+        <h5>Company</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li><a href="/mission/">Mission &amp; Values</a></li>
+          <li><a href="/editorial-guidelines/">Editorial Guidelines</a></li>
+          <li><a href="/sponsorships/">Sponsorships</a></li>
+          <li><a href="https://realpython.workable.com">Careers</a></li>
+          <li><a href="/media-kit/">Press Kit</a></li>
+          <li><a href="/merch">Merch</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="flex-column flex-lg-row justify-content-center align-items-center mt-5 row ">
+
+      <div class="d-flex justify-content-center mx-4 text-muted flex-nowrap">
+        <a class="highlight-icon-hover-dark px-2 ml-n2" title="YouTube" href="https://www.youtube.com/realpython"><span class="icon baseline" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#brands--youtube"/></svg></span></a>
+        <a class="highlight-icon-hover-dark px-2" title="X/Twitter" href="https://x.com/realpython"><span class="icon baseline" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#brands--x-twitter"/></svg></span></a>
+        <a class="highlight-icon-hover-dark px-2" title="LinkedIn" href="https://www.linkedin.com/company/realpython-com"><span class="icon baseline" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#brands--linkedin"/></svg></span></a>
+        <a class="highlight-icon-hover-dark px-2" title="Facebook" href="https://www.facebook.com/LearnRealPython"><span class="icon baseline" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#brands--facebook"/></svg></span></a>
+        <a class="highlight-icon-hover-dark px-2 mr-n2" title="GitHub" href="https://github.com/realpython/"><span class="icon baseline" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#brands--github"/></svg></span></a>
+      </div>
+
+      <div class="mx-4 small text-muted text-center text-wrap-balance">
+        <a href="/privacy-policy/">Privacy Policy</a>&nbsp;⋅
+        <a href="/terms/">Terms of Use</a>&nbsp;⋅
+        
+        <a href="/security/">Security</a>&nbsp;⋅
+        
+        <a href="/contact/">Contact</a>
+      </div>
+
+      <div class="mx-4 small text-muted user-select-none text-center">
+        <span><span class="icon baseline text-color-red" aria-hidden="true"><svg aria-hidden="true"><use href="/static/icons.1fb5b1968c3f.svg#solid--heart"/></svg></span> Happy Pythoning!</span>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center small mt-4">
+      <div class="text-muted text-center text-wrap-balance" style="line-height: 1.25;">
+        <small>
+          © 2012–2026 DevCademy Media Inc. DBA Real&nbsp;Python. All rights reserved.<br>
+          REALPYTHON™ is a trademark of DevCademy&nbsp;Media&nbsp;Inc.
+        </small>
+        <a href="/" class="d-flex justify-content-center mt-3 mx-auto w-50">
+          <img loading="lazy" src="/static/real-python-logo-primary.973743b6d39d.svg" class="img-fluid flex-grow-1" width="120" height="47" alt="Real Python - Online Python Training (logo)">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+    
+
+    
+
+    
+    <script>
+      (function() {
+        var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+        if (!isAndroid) {
+          return;
+        }
+
+        var styles = `
+        @font-face {
+          font-family: 'DejaVu Sans Mono';
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+          src: url('/static/mfonts/dejavu-sans-mono.33f00225f915.woff2') format('woff2'),
+               url('/static/mfonts/dejavu-sans-mono.0da77d3739f3.woff') format('woff'),
+               url('/static/mfonts/dejavu-sans-mono.c2356fc49835.ttf') format('truetype');
+        }
+        code, kbd, pre, samp {
+          font-family: 'DejaVu Sans Mono', monospace;
+        }
+        `
+
+        var styleSheet = document.createElement("style")
+        styleSheet.type = "text/css"
+        styleSheet.innerText = styles
+        document.head.appendChild(styleSheet)
+      })();
+    </script>
+
+    
+    
+    <script src="/static/jquery.min.2c872dbe60f4.js"></script>
+    <script src="/static/popper.min.aeebb49d0b64.js"></script>
+    <script src="/static/bootstrap.min.248284cdd069.js"></script>
+
+    
+    
+
+
+    <script>
+    (function() {
+      document.querySelectorAll(".js-search-form-submit").forEach(function(el) {
+        el.addEventListener("click", function(e) {
+          e.preventDefault();
+          e.currentTarget.parentElement.submit();
+        })
+      });
+    })();
+    </script>
+    <script src="/static/frontend/reader/lightbox.3a7de9a00787.js" async></script>
+    <script src="/static/frontend/reader/platforms-ui.4eb784d1a653.js" async></script>
+    
+
+    <script src="/static/frontend/previews/popover.b80d6cdefcab.js" async></script>
+
+    
+      
+
+
+<exit-prompt>
+  <template>
+    <div class="card bg-secondary">
+      <div class="card-header h3 text-center bg-light">
+        Free Bonus: <strong>Python Cheat Sheet</strong>
+        <button type="button" class="float-right border-0 bg-transparent text-muted" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="card-body">
+        <p class="mb-0">Get a <strong>Python Cheat Sheet (PDF)</strong> and learn the basics of Python, like working with data types, dictionaries, lists, and Python functions:</p>
+        <img class="img-fluid mb-3 w-100 px-3" src="/static/cheatsheet-stacked-sm.c9ac81c58bcc.png" alt="Python Cheat Sheet" width="400" height="257">
+        <div class="row">
+            <form class="col-12" action="/optins/process/" method="post">
+              <input type="hidden" name="slug" value="static-cheat-sheet">
+              <input type="hidden" name="source_path" value="/ref/">
+              <div class="form-group">
+                <input name="email" type="email" class="form-control form-control-lg" placeholder="Email Address" autocomplete="email" required autofocus>
+              </div>
+              <button name="submit" type="submit" class="btn btn-primary btn-lg btn-block">Send My Python Cheat&nbsp;Sheet »</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</exit-prompt>
+
+
+
+
+    
+
+    
+
+
+
+
+    <script src="/static/frontend/reference/components/sidebar.dc45dd7453a5.js" defer></script>
+<script src="/static/frontend/components/exit-prompt.284008365354.js" defer></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    <script src="/static/frontend/optins/optins.e8aa22cf6606.js" async></script>
+    <script src="/static/frontend/search/autocomplete.0944251f314b.js" async></script>
+
+    
+
+    
+
+    
+
+    
+
+    
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  setTimeout(function(){s.parentNode.insertBefore(t,s)}, 3000);}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2220911568135371');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2220911568135371&ev=PageView&noscript=1"
+/></noscript>
+
+
+    
+
+    
+
+    
+
+
+  
+  <div id="g_id_onload"
+    data-client_id="912944204353-gv43om9f7qmj4eprm0esc45r12etunvp.apps.googleusercontent.com"
+    data-login_uri="https://realpython.com/account/google/login/token/?next=/ref/"
+    data-itp_support="false">
+  </div>
+  <script src="//accounts.google.com/gsi/client" async></script>
+
+
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d61599a188cf424',t:'MTc3MjQ2NDQ1NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
